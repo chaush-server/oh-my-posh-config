@@ -1,2 +1,2 @@
 # kali custom config
-![image](https://github.com/chaush-server/oh-my-posh-config/assets/79080580/0683224a-a616-44e7-b08e-12f27017f9bc)
+![image](https://github.com/chaush-server/oh-my-posh-config/assets/79080580/cde774f9-d81a-4f93-8886-f27c11b98474)
