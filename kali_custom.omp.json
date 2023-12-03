@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "python",
+          "style": "plain",
+          "template": "{{ if .Venv }}{{ end }}"
+        },
+        {
+          "foreground": "lightBlue",
+          "foreground_templates": [
+            "{{ if .Root }}lightRed{{ end }}"
+          ],
+          "properties": {
+            "display_host": true
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>\u250c\u2500</>",
+          "type": "session"
+        },
+        {
+          "foreground": "lightWhite",
+          "properties": {
+            "folder_separator_icon": "<#c0c0c0>/</>",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>[</>{{ .Path }}<{{ if .Root }}lightBlue{{ else }}green{{ end }}>]</>",
+          "type": "path"
+        }
+        ,{
+          "foreground": "white",
+          "style": "plain",
+          "properties": {
+            "branch_icon": "",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>-[</>{{ .UpstreamIcon }}{{ .HEAD }}<{{ if .Root }}lightBlue{{ else }}green{{ end }}>]</>",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#f1184c",
+          "style": "plain",
+          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>\u2514\u2500</>",
+          "type": "text"
+        },
+        {
+          "foreground": "green",
+          "style": "plain",
+          "template": "<green>{{if .Venv}}[<white>{{.Patch}}.{{.Minor}}</>]{{end}}</>",
+          "type": "python"
+        },
+        {
+          "foreground": "green",
+          "template": "{{ if .Root }}<lightBlue><red>\udb85\udc0b</></>{{ else }}${{ end }} ",
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
