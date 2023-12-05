@@ -18,7 +18,7 @@
             "display_host": true
           },
           "style": "plain",
-          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>\u250c\u2500</>",
+          "template": "<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>┌─</>",
           "type": "session"
         },
         {
@@ -28,7 +28,7 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>[</>{{ .Path }}<{{ if .Root }}lightBlue{{ else }}green{{ end }}>]</>",
+          "template": "<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>[</>\uf4d3 {{ .Path }}<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>]</>",
           "type": "path"
         }
         ,{
@@ -39,7 +39,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>-[</>{{ .UpstreamIcon }}{{ .HEAD }}<{{ if .Root }}lightBlue{{ else }}green{{ end }}>]</>",
+          "template": "<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>-[</>{{ .UpstreamIcon }}{{ .HEAD }}<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>]</>",
           "type": "git"
         }
       ],
@@ -52,17 +52,17 @@
         {
           "foreground": "#f1184c",
           "style": "plain",
-          "template": "<{{ if .Root }}lightBlue{{ else }}green{{ end }}>\u2514\u2500</>",
+          "template": "<{{ if .Root }}lightBlue{{ else }}#50fa7b{{ end }}>└─</>",
           "type": "text"
         },
         {
-          "foreground": "green",
+          "foreground": "#50fa7b",
           "style": "plain",
-          "template": "<green>{{if .Venv}}[<white>{{.Patch}}.{{.Minor}}</>]{{end}}</>",
+          "template": "<#50fa7b>{{if .Venv}}[<white>{{.Major}}.{{.Minor}}</>]{{end}}</>",
           "type": "python"
         },
         {
-          "foreground": "green",
+          "foreground": "#50fa7b",
           "template": "{{ if .Root }}<lightBlue><red>\udb85\udc0b</></>{{ else }}${{ end }} ",
           "style": "plain",
           "type": "text"
